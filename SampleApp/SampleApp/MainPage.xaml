@@ -1,14 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:SampleApp"
-             x:Class="SampleApp.MainPage">
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:local="clr-namespace:SampleApp"
+                 x:Class="SampleApp.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+        <StackLayout>
+            <Button Text="Show Dialog" Command="{Binding ShowDialog}" />
+            <popuplayout:SfPopupLayout IsOpen="{Binding DialogVisible}">
+                <popuplayout:SfPopupLayout.Content>
+                    <StackLayout>
+                        <Label Text="Welcome to Xamarin.Forms!" 
+                               HorizontalOptions="Center"
+                               VerticalOptions="CenterAndExpand" />
+                    </StackLayout>
+                </popuplayout:SfPopupLayout.Content>
+            </popuplayout:SfPopupLayout>
+        </StackLayout>
 
-</ContentPage>
+    </ContentPage>
