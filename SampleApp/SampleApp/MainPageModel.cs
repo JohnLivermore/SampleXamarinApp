@@ -9,23 +9,11 @@ namespace SampleApp
 {
     public class MainPageModel : FreshBasePageModel
     {
-        public bool Dialog1Open { get; set; }
-        public bool Dialog2Open { get; set; }
-
-        public ICommand OpenDialog1
+        public MainPageModel()
         {
-            get
-            {
-                return new Command(() => { Dialog1Open = true; });
-            }
+            ParentViewModel = new ParentViewModel();
         }
 
-        public ICommand OpenDialog2
-        {
-            get
-            {
-                return new Command(() => { Dialog2Open = true; });
-            }
-        }
+        public ParentViewModel ParentViewModel { get; set; }
     }
 }

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+    <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+                 xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="SampleApp.PopupView">
+        <ContentView.Content>
+            <StackLayout>
+                <telerikPrimitives:RadPopup.Popup>
+                    <telerikPrimitives:RadPopup IsOpen="{Binding IsOpen}" 
+                                                IsModal="True"
+                                                Placement="Center"
+                                                OutsideBackgroundColor="#6F000000">
+                        <telerikPrimitives:RadBorder CornerRadius="8" 
+                                                     BackgroundColor="Wheat">
+                            <Grid Padding="20">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0"
+                                       Text="Label 1" />
+                                <Label Grid.Row="1" Grid.Column="0"
+                                       Text="Label 2" />
+                                <Label Grid.Row="2" Grid.Column="0"
+                                       Text="Label 3" />
+                                <Entry Grid.Row="0" Grid.Column="1"
+                                       Text="Entry 1" />
+                                <Entry Grid.Row="1" Grid.Column="1"
+                                       Text="Entry 2" />
+                                <Entry Grid.Row="2" Grid.Column="1"
+                                       Text="Entry 3" />
+                            </Grid>
+                        </telerikPrimitives:RadBorder>
+                    </telerikPrimitives:RadPopup>
+                </telerikPrimitives:RadPopup.Popup>
+            </StackLayout>
+        </ContentView.Content>
+    </ContentView>

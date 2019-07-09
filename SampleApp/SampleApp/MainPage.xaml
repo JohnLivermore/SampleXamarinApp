@@ -7,45 +7,8 @@
                  x:Class="SampleApp.MainPage">
 
         <StackLayout>
-            <Button HorizontalOptions="Center" 
-                    VerticalOptions="Start" 
-                    Text="Click here to rate" 
-                    Command="{Binding OpenDialog1}">
-            </Button>
-            <telerikPrimitives:RadPopup.Popup>
-                <telerikPrimitives:RadPopup IsModal="True"
-                                            IsOpen="{Binding Dialog1Open}"
-                                            Placement="Center"
-                                            OutsideBackgroundColor="#6F000000">
-                    <telerikPrimitives:RadBorder CornerRadius="8" 
-                                                 BackgroundColor="Wheat">
-                        <Grid Padding="20">
-                            <Grid.RowDefinitions>
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Row="0" Grid.Column="0"
-                                   Text="Label 1" />
-                            <Label Grid.Row="1" Grid.Column="0"
-                                   Text="Label 2" />
-                            <Label Grid.Row="2" Grid.Column="0"
-                                   Text="Label 3" />
-                            <Entry Grid.Row="0" Grid.Column="1"
-                                   Text="Entry 1" />
-                            <Entry Grid.Row="1" Grid.Column="1"
-                                   Text="Entry 2" />
-                            <Entry Grid.Row="2" Grid.Column="1"
-                                   Text="Entry 3" />
-                        </Grid>
-                    </telerikPrimitives:RadBorder>
-                </telerikPrimitives:RadPopup>
-            </telerikPrimitives:RadPopup.Popup>
-        </StackLayout>
+        <local:ParentView BindingContext="{Binding ParentViewModel}" />
+    </StackLayout>
     </ContentPage>
 
     

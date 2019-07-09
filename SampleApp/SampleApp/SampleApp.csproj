@@ -15,4 +15,13 @@
     <PackageReference Include="Telerik.UI.for.Xamarin.Trial" Version="2019.2.619.1" />
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
   </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="ParentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="PopupView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
