@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FreshMvvm;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,6 +11,10 @@ namespace SampleApp
         public App()
         {
             InitializeComponent();
+
+            FreshIOC.Container.Register<ICompanyService, CompanyService>();
+            FreshIOC.Container.Register<ParentViewModel, ParentViewModel>();
+            FreshIOC.Container.Register<PopupViewModel, PopupViewModel>();
 
             MainPage = FreshMvvm.FreshPageModelResolver.ResolvePageModel<MainPageModel>();
         }

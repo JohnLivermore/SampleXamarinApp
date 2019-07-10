@@ -9,9 +9,12 @@ namespace SampleApp
     [AddINotifyPropertyChangedInterface]
     public class ParentViewModel
     {
-        public ParentViewModel()
+        private readonly ICompanyService _companyService;
+
+        public ParentViewModel(PopupViewModel popupViewModel, ICompanyService companyService)
         {
-            PopupViewModel = new PopupViewModel();
+            PopupViewModel = popupViewModel;
+            _companyService = companyService;
         }
 
         public PopupViewModel PopupViewModel { get; set; }
@@ -22,6 +25,7 @@ namespace SampleApp
             {
                 return new Command(() =>
                 {
+                    PopupViewModel.CompanyModel = _companyService.GetCompany();
                     PopupViewModel.IsOpen = true;
                 });
             }

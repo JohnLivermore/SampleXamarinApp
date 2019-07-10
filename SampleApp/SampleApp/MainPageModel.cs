@@ -9,9 +9,9 @@ namespace SampleApp
 {
     public class MainPageModel : FreshBasePageModel
     {
-        public MainPageModel()
+        public MainPageModel(ParentViewModel parentViewModel)
         {
-            ParentViewModel = new ParentViewModel();
+            ParentViewModel = parentViewModel;
         }
 
         public ParentViewModel ParentViewModel { get; set; }
