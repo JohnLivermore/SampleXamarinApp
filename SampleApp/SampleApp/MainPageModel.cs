@@ -10,26 +10,33 @@ namespace SampleApp
     {
         public MainPageModel()
         {
-            PanelAViewModel = new PanelAViewModel() { IsVisible = true };
+            PanelAViewModel = new PanelAViewModel();
             PanelBViewModel = new PanelBViewModel();
         }
 
         public PanelAViewModel PanelAViewModel { get; set; }
         public PanelBViewModel PanelBViewModel { get; set; }
 
-        public Command Toggle
+        public Command ToggleA
         {
             get
             {
                 return new Command(() =>
                 {
                     PanelAViewModel.IsVisible = !PanelAViewModel.IsVisible;
-                    PanelBViewModel.IsVisible = !PanelBViewModel.IsVisible;
                 });
             }
         }
 
-        public bool IsVisible { get; set; }
-
+        public Command ToggleB
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    PanelBViewModel.IsVisible = !PanelBViewModel.IsVisible;
+                });
+            }
+        }
     }
 }

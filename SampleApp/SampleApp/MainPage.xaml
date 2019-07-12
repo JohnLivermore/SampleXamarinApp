@@ -9,17 +9,22 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-            <StackLayout Grid.Column="0">
-                <Button Text="Toggle" Command="{Binding Toggle}" />
-            </StackLayout>
+            <Button Grid.Row="0" Grid.Column="0"
+                    Text="Toggle Panel A" 
+                    Command="{Binding ToggleA}" />
+            <Button Grid.Row="1" Grid.Column="0"
+                    Text="Toggle Panel B" Command="{Binding ToggleB}" />
 
-            <local:PanelAView Grid.Column="1"
+            <local:PanelAView Grid.Row="0" Grid.Column="1"
                               BindingContext="{Binding PanelAViewModel}"
-                              PanelVisible="{Binding IsVisible}" />
-            <local:PanelBView Grid.Column="1"
-                              BindingContext="{Binding PanelBViewModel}"
-                              PanelVisible="{Binding IsVisible}" />
+                              IsVisible="{Binding IsVisible}" />
+            <local:PanelBView Grid.Row="1" Grid.Column="1"
+                              BindingContext="{Binding PanelBViewModel}" />
         </Grid>
 
     </ContentPage>

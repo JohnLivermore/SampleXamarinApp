@@ -2,8 +2,7 @@
 
 namespace SampleApp
 {
-    public class PanelAViewModel : FreshBasePageModel
+    public class PanelAViewModel : BaseViewModel
     {
-        public bool IsVisible { get; set; }
     }
 }
