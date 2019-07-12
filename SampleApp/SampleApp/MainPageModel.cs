@@ -3,6 +3,7 @@ using PropertyChanged;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace SampleApp
 {
@@ -17,6 +18,18 @@ namespace SampleApp
                 new ViewModel(){Name="D"}
             };
         }
+
+        public Command ButtonClick
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    // have this called by the grid
+                });
+            }
+        }
+
 
         public List<ViewModel> Items { get; set; }
     }
