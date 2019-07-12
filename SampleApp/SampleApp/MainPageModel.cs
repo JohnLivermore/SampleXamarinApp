@@ -10,26 +10,9 @@ namespace SampleApp
     {
         public MainPageModel()
         {
-            PanelAViewModel = new PanelAViewModel() { IsVisible = true };
-            PanelBViewModel = new PanelBViewModel();
+            LabelText = "Xamarin Forms Header";
         }
 
-        public PanelAViewModel PanelAViewModel { get; set; }
-        public PanelBViewModel PanelBViewModel { get; set; }
-
-        public Command Toggle
-        {
-            get
-            {
-                return new Command(() =>
-                {
-                    PanelAViewModel.IsVisible = !PanelAViewModel.IsVisible;
-                    PanelBViewModel.IsVisible = !PanelBViewModel.IsVisible;
-                });
-            }
-        }
-
-        public bool IsVisible { get; set; }
-
+        public string LabelText { get; set; }
     }
 }

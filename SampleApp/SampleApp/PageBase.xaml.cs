@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace SampleApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class PanelBView : PanelView
+	public partial class PageBase : ContentPage
 	{
-		public PanelBView ()
+		public PageBase ()
 		{
 			InitializeComponent ();
 		}
