@@ -9,12 +9,22 @@ using Xamarin.Forms.Xaml;
 
 namespace SampleApp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class PageBase : ContentPage
-	{
-		public PageBase ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class PageBase : ContentPage
+    {
+        public PageBase ()
+        {
+            InitializeComponent ();
+        }
+
+        public static readonly BindableProperty LabelTextProperty = BindableProperty.Create("LabelText", 
+                                                                                            typeof(string), 
+                                                                                            typeof(PageBase), 
+                                                                                            "Control Template Demo App");
+        public string LabelText
+        {
+            get { return (string)base.GetValue(LabelTextProperty); }
+            set { base.SetValue(LabelTextProperty, value); }
+        }
+    }
 }
