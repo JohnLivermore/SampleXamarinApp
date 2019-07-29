@@ -1,25 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-                 xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:local="clr-namespace:SampleApp"
-                 x:Class="SampleApp.MainPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleApp"
+             x:Class="SampleApp.MainPage">
 
-        <StackLayout VerticalOptions="FillAndExpand">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Label Grid.Row="0" Text="The grid below should show the grid with a header label, but no rows..." />
-                <telerikGrid:RadDataGrid Grid.Row="1"
-                                         ItemsSource="{Binding Source}" 
-                                         AutoGenerateColumns="False" >
-                    <telerikGrid:RadDataGrid.Columns>
-                        <telerikGrid:DataGridTextColumn PropertyName="Name" 
-                                                        HeaderStyle="{x:Static local:DataGridHelpers.NoOptionsHeaderStyle}" />
-                    </telerikGrid:RadDataGrid.Columns>
-                </telerikGrid:RadDataGrid>
-            </Grid>
-        </StackLayout>
-    </ContentPage>
+    <!-- Solution. See https://docs.telerik.com/devtools/xamarin/troubleshooting/controls-are-not-appearing for more details. -->
+    <StackLayout VerticalOptions="FillAndExpand">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0"
+                   Text="The grid below should show the grid with a header label, but no rows..." />
+
+            <!-- Provide a HeightRequest for the DataGrid, or remove the parent StackLayout -->
+            <telerikGrid:RadDataGrid HeightRequest="400"
+                                     Grid.Row="1"
+                                     ItemsSource="{Binding Source}"
+                                     AutoGenerateColumns="False">
+                <telerikGrid:RadDataGrid.Columns>
+                    <telerikGrid:DataGridTextColumn PropertyName="Name"
+                                                    HeaderStyle="{x:Static local:DataGridHelpers.NoOptionsHeaderStyle}" />
+                </telerikGrid:RadDataGrid.Columns>
+            </telerikGrid:RadDataGrid>
+        </Grid>
+    </StackLayout>
+
+    <!-- Recommended option -->
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0"
+               Text="The grid below should show the grid with a header label, but no rows..." />
+        <telerikGrid:RadDataGrid Grid.Row="1"
+                                 ItemsSource="{Binding Source}"
+                                 AutoGenerateColumns="False">
+            <telerikGrid:RadDataGrid.Columns>
+                <telerikGrid:DataGridTextColumn PropertyName="Name"
+                                                HeaderStyle="{x:Static local:DataGridHelpers.NoOptionsHeaderStyle}" />
+            </telerikGrid:RadDataGrid.Columns>
+        </telerikGrid:RadDataGrid>
+    </Grid>-->
+</ContentPage>

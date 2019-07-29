@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -12,7 +12,7 @@
   <ItemGroup>
     <PackageReference Include="FreshMvvm" Version="3.0.0" />
     <PackageReference Include="PropertyChanged.Fody" Version="2.6.1" />
-    <PackageReference Include="Telerik.UI.for.Xamarin.DataGrid.Trial" Version="2019.2.708.1" />
+    <PackageReference Include="Telerik.UI.for.Xamarin.Trial" Version="2019.2.708.1" />
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
   </ItemGroup>
 
