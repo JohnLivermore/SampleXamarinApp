@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Telerik.XamarinForms.DataGrid;
 using Xamarin.Forms;
 
 namespace SampleApp
@@ -12,6 +8,15 @@ namespace SampleApp
         public MainPage()
         {
             InitializeComponent();
+        }
+    }
+
+    public class MyFixedTextColumn : DataGridTextColumn
+    {
+        public MyFixedTextColumn()
+        {
+            this.SizeMode = DataGridColumnSizeMode.Fixed;
+            this.Width = 20;
         }
     }
 }

@@ -12,8 +12,8 @@ namespace SampleApp
         {
             Source = new List<Entity>()
             {
-                new Entity() { Name = "abc" },
-                new Entity() { Name = "def" }
+                new Entity() { Name = "abc", Occupation = "ghi"},
+                new Entity() { Name = "def", Occupation = "jkl" }
             };
         }
 
@@ -24,5 +24,6 @@ namespace SampleApp
     public class Entity
     {
         public string Name { get; set; }
+        public string Occupation { get; set; }
     }
 }

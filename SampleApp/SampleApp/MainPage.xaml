@@ -1,16 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-                 xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:local="clr-namespace:SampleApp"
-                 x:Class="SampleApp.MainPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleApp"
+             x:Class="SampleApp.MainPage">
 
-        <Grid>
-            <telerikGrid:RadDataGrid x:Name="dataGrid" ItemsSource="{Binding Source}" AutoGenerateColumns="False" >
-                <telerikGrid:RadDataGrid.Columns>
-                    <telerikGrid:DataGridTextColumn PropertyName="Name" />
-                </telerikGrid:RadDataGrid.Columns>
-            </telerikGrid:RadDataGrid>
-        </Grid>
-
-    </ContentPage>
+    <Grid>
+        <telerikGrid:RadDataGrid x:Name="dataGrid"
+                                 ItemsSource="{Binding Source}"
+                                 AutoGenerateColumns="False">
+            <telerikGrid:RadDataGrid.Columns>
+                <local:MyFixedTextColumn PropertyName="Name" />
+                <local:MyFixedTextColumn PropertyName="Occupation" />
+            </telerikGrid:RadDataGrid.Columns>
+        </telerikGrid:RadDataGrid>
+    </Grid>
+</ContentPage>

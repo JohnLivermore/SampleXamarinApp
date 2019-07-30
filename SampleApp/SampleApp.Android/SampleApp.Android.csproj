@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Telerik.UI.for.Xamarin.DataGrid.Trial">
+    <PackageReference Include="Telerik.UI.for.Xamarin.Trial">
       <Version>2019.2.708.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
