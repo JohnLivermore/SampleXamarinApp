@@ -145,6 +145,18 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
+    <Reference Include="Telerik.Xamarin.iOS">
+      <HintPath>..\..\..\..\..\..\..\..\Wolfepak\Code\WPMobile\lib\telerik\xamarin\ios\Telerik.Xamarin.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Common">
+      <HintPath>..\..\..\..\..\..\..\..\Wolfepak\Code\WPMobile\lib\telerik\xamarin\ios\Telerik.XamarinForms.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.DataGrid">
+      <HintPath>..\..\..\..\..\..\..\..\Wolfepak\Code\WPMobile\lib\telerik\xamarin\ios\Telerik.XamarinForms.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Primitives">
+      <HintPath>..\..\..\..\..\..\..\..\Wolfepak\Code\WPMobile\lib\telerik\xamarin\ios\Telerik.XamarinForms.Primitives.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
