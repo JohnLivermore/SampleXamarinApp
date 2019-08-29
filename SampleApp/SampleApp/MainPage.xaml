@@ -1,14 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:SampleApp"
-             x:Class="SampleApp.MainPage">
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:local="clr-namespace:SampleApp"
+                 xmlns:telerik="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+                 x:Class="SampleApp.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+        <StackLayout>
+            <!-- Place new controls here -->
+            <Label Text="Welcome to Xamarin.Forms!" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
 
-</ContentPage>
+            <telerik:RadCheckBox />
+
+        </StackLayout>
+
+    </ContentPage>
