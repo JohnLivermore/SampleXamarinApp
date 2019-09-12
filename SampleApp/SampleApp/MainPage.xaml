@@ -1,14 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:SampleApp"
-             x:Class="SampleApp.MainPage">
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:local="clr-namespace:SampleApp"
+                 x:Class="SampleApp.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+        <StackLayout>
+            <CollectionView ItemsSource="{Binding GaugeSites}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
 
-</ContentPage>
+                            <Label Grid.Row="0"
+                                   Grid.Column="0"
+                                   Text="{Binding Description}"
+                                   TextColor="Black"
+                                   FontAttributes="Bold" />
+                            
+                            <Label Grid.Row="0"
+                                   Grid.Column="1" 
+                                   Text="Click Me!">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding DoSomethingInteresting}" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        </StackLayout>
+    </ContentPage>
