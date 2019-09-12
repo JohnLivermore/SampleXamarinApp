@@ -14,18 +14,19 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="40" />
                             </Grid.RowDefinitions>
 
-                            <Label Grid.Row="0"
-                                   Grid.Column="0"
+                            <Label Grid.Column="0"
                                    Text="{Binding Description}"
+                                   FontSize="20"
+                                   Margin="10"
                                    TextColor="Black"
                                    FontAttributes="Bold" />
                             
-                            <Label Grid.Row="0"
-                                   Grid.Column="1" 
+                            <Label Grid.Column="1" 
+                                   Margin="10"
+                                   FontSize="20" 
                                    Text="Click Me!">
                                 <Label.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding DoSomethingInteresting}" />
