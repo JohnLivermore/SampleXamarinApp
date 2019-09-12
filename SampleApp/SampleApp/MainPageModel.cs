@@ -1,4 +1,5 @@
 ﻿using FreshMvvm;
+using PropertyChanged;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -35,6 +36,7 @@ namespace SampleApp
         }
     }
 
+    [AddINotifyPropertyChangedInterface]
     public class GaugeSite
     {
         public string Description { get; set; }
