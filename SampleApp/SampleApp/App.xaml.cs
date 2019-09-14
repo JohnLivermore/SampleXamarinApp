@@ -11,8 +11,23 @@ namespace SampleApp
         {
             InitializeComponent();
 
-            MainPage = FreshMvvm.FreshPageModelResolver.ResolvePageModel<MainPageModel>();
-            //MainPage = FreshMvvm.FreshPageModelResolver.ResolvePageModel<Main2PageModel>();
+            // ********************************
+            // ********************************
+            // change this flag to run the different pages
+            var runPageThatHasError = true;
+            // ********************************
+            // ********************************
+
+            if (runPageThatHasError)
+            {
+                // this page uses a base page and throws an exception stating it can't find the control
+                MainPage = FreshMvvm.FreshPageModelResolver.ResolvePageModel<MainPageModel>();
+            }
+            else
+            {
+                // this page doesn't use a base page and works fine
+                MainPage = FreshMvvm.FreshPageModelResolver.ResolvePageModel<Main2PageModel>();
+            }
         }
     }
 }
