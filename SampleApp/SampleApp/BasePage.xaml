@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 mc:Ignorable="d"
+                 x:Class="SampleApp.BasePage">
+        <ContentPage.Resources>
+            <Style x:Key="DialogHeaderButton" TargetType="Label">
+                <Setter Property="TextColor" Value="#66B0E4" />
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+        </ContentPage.Resources>
+
+        <ContentPage.ControlTemplate>
+            <ControlTemplate>
+                <ContentPresenter VerticalOptions="FillAndExpand" />
+            </ControlTemplate>
+        </ContentPage.ControlTemplate>
+    </ContentPage>

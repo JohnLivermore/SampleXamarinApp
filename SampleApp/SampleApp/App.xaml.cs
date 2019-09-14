@@ -12,21 +12,7 @@ namespace SampleApp
             InitializeComponent();
 
             MainPage = FreshMvvm.FreshPageModelResolver.ResolvePageModel<MainPageModel>();
-        }
-
-        protected override void OnStart()
-        {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
+            //MainPage = FreshMvvm.FreshPageModelResolver.ResolvePageModel<Main2PageModel>();
         }
     }
 }

@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace SampleApp
 {
-    public class MainPageModel : FreshBasePageModel
+    public class Main2PageModel : FreshBasePageModel
     {
-        public MainPageModel() : base()
+        public Main2PageModel() : base()
         {
             Models = new List<Model>();
 
