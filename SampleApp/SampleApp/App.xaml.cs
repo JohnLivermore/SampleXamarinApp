@@ -10,7 +10,10 @@ namespace SampleApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            var mainPage = new MainPage();
+            var nav = new NavigationPage(mainPage);
+
+            MainPage = nav;
         }
 
         protected override void OnStart()
