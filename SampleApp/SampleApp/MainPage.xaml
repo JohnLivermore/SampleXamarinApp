@@ -6,16 +6,30 @@
                  mc:Ignorable="d"
                  Title="Page Title"
                  x:Class="SampleApp.MainPage">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Label Grid.Row="0" Text="Field A:" />
-            <Editor Grid.Row="1" HeightRequest="200" />
-            <Label Grid.Row="2" Text="Field B:" />
-            <Editor Grid.Row="3" HeightRequest="200" />
-        </Grid>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="Field A:" />
+                <Editor Grid.Row="1" HeightRequest="200" />
+                <Label Grid.Row="2" Text="Field B:" />
+                <Editor Grid.Row="3" HeightRequest="200" />
+                <Label  Grid.Row="4" Text="Field B:" />
+                <Editor Grid.Row="5" HeightRequest="200" />
+                <Label  Grid.Row="6" Text="Field B:" />
+                <Editor Grid.Row="7" HeightRequest="200" />
+                <Label  Grid.Row="8" Text="Field B:" />
+                <Editor Grid.Row="9" HeightRequest="200" />
+            </Grid>
+        </ScrollView>
     </ContentPage>
