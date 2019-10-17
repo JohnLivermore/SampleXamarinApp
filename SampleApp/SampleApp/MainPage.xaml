@@ -19,6 +19,7 @@
                    HorizontalOptions="Center"
                    VerticalOptions="Center" />
             <Button Command="{Binding OpenDialog}" 
+                    Text="Open Dialog"
                     VerticalOptions="End" />
         </StackLayout>
 

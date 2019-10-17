@@ -5,11 +5,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="SampleApp.DialogPage">
-    
+
     <NavigationPage.TitleView>
         <StackLayout HorizontalOptions="Center" 
-                         VerticalOptions="Center"
-                         Margin="0,40,0,0">
+                         VerticalOptions="Center">
             <Label Text="Page Title" />
         </StackLayout>
     </NavigationPage.TitleView>
