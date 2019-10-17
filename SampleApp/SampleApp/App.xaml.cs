@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FreshMvvm;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,6 +12,13 @@ namespace SampleApp
             InitializeComponent();
 
             MainPage = new MainPage();
+
+            var mainPage = FreshPageModelResolver.ResolvePageModel<MainPageModel>();
+            var mainNavigation = new FreshNavigationContainer(mainPage);
+            mainNavigation.BarBackgroundColor = Color.FromRgb(0, 69, 140);
+            mainNavigation.BarTextColor = Color.White;
+
+            MainPage = mainNavigation;
         }
 
         protected override void OnStart()
