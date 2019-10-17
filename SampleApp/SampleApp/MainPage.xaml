@@ -7,17 +7,10 @@
                  x:Class="SampleApp.MainPage">
 
         <NavigationPage.TitleView>
-            <Grid BackgroundColor="Blue">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Label Grid.Row="0" Grid.Column="0"
-                       TextColor="Black"
-                       Text="Page Title" />
-            </Grid>
+            <StackLayout HorizontalOptions="Center" 
+                         VerticalOptions="Center">
+                <Label Text="Page Title" />
+            </StackLayout>
         </NavigationPage.TitleView>
 
         <StackLayout>
