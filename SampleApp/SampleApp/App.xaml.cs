@@ -11,7 +11,7 @@ namespace SampleApp
             InitializeComponent();
 
             var navPage = new NavigationPage(new MainPage());
-            navPage.BarBackgroundColor = Color.Blue; 
+            navPage.BarBackgroundColor = Color.Blue;
             navPage.BarTextColor = Color.White;
             navPage.BackgroundColor = Color.Red;
 
