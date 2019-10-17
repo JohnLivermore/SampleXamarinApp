@@ -15,8 +15,6 @@ namespace SampleApp
 
             var mainPage = FreshPageModelResolver.ResolvePageModel<MainPageModel>();
             var mainNavigation = new FreshNavigationContainer(mainPage);
-            mainNavigation.BarBackgroundColor = Color.FromRgb(0, 69, 140);
-            mainNavigation.BarTextColor = Color.White;
 
             MainPage = mainNavigation;
         }

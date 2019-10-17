@@ -6,20 +6,11 @@
                  mc:Ignorable="d"
                  x:Class="SampleApp.MainPage">
 
-        <NavigationPage.TitleView>
-            <StackLayout HorizontalOptions="Center" 
-                         VerticalOptions="Center">
-                <Label Text="Page Title" />
-            </StackLayout>
-        </NavigationPage.TitleView>
-
         <StackLayout>
             <!-- Place new controls here -->
             <Label Text="Welcome to Xamarin.Forms!" 
                    HorizontalOptions="Center"
                    VerticalOptions="Center" />
-            <Button Command="{Binding OpenDialog}" 
-                    VerticalOptions="End" />
         </StackLayout>
 
     </ContentPage>
