@@ -16,6 +16,12 @@ namespace SampleApp
         public MainPage()
         {
             InitializeComponent();
+
+            Model = new MainPageModel();
+
+            BindingContext = Model;
         }
+
+        public MainPageModel Model { get; set; }
     }
 }
