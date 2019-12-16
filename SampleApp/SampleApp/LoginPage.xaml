@@ -4,23 +4,23 @@
                  xmlns:d="http://xamarin.com/schemas/2014/forms/design"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                  mc:Ignorable="d"
-                 x:Class="SampleApp.MainPage">
+                 x:Class="SampleApp.LoginPage">
 
         <Grid>
             <CollectionView Grid.Row="0"
-                            ItemsSource="{Binding Members}"
+                            ItemsSource="{Binding Animals}"
                             VerticalOptions="FillAndExpand"
                             Margin="10,0,10,0"
                             SelectionMode="None">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Label Text="{Binding Item}" />
+                        <Label Text="{Binding Name}" />
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-            <Button Text="Logout"
-                    Command="{Binding Logout}" />
+            <!--<Button Text="Login"
+                    Command="{Binding Login}" />-->
         </Grid>
 
     </ContentPage>
