@@ -11,14 +11,10 @@ namespace SampleApp
         {
             InitializeComponent();
 
-            // register main container navigation
-            var mainPage = FreshPageModelResolver.ResolvePageModel<MainPageModel>();
-            var mainNavigation = new FreshNavigationContainer(mainPage, "MAIN");
-
             var authPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
             var authNavigation = new FreshNavigationContainer(authPage, "AUTH");
 
-            MainPage = authNavigation;
+            MainPage = authPage;
         }
 
         protected override void OnStart()
