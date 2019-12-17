@@ -6,11 +6,11 @@
                  mc:Ignorable="d"
                  x:Class="SampleApp.MainPage">
 
-        <Grid>
-            <CollectionView Grid.Row="0"
-                            ItemsSource="{Binding Members}"
+    <StackLayout>
+            <CollectionView ItemsSource="{Binding Members}"
                             VerticalOptions="FillAndExpand"
                             Margin="10,0,10,0"
+                            IsVisible="{Binding ShowList}"
                             SelectionMode="None">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -21,6 +21,6 @@
 
             <Button Text="Logout"
                     Command="{Binding Logout}" />
-        </Grid>
+        </StackLayout>
 
     </ContentPage>

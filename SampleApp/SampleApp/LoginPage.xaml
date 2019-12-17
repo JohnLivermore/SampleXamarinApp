@@ -6,10 +6,10 @@
                  mc:Ignorable="d"
                  x:Class="SampleApp.LoginPage">
 
-        <Grid>
-            <CollectionView Grid.Row="0"
-                            ItemsSource="{Binding Animals}"
+        <StackLayout>
+            <CollectionView ItemsSource="{Binding Animals}"
                             VerticalOptions="FillAndExpand"
+                            IsVisible="{Binding ShowList}"
                             Margin="10,0,10,0"
                             SelectionMode="None">
                 <CollectionView.ItemTemplate>
@@ -19,8 +19,8 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-            <!--<Button Text="Login"
-                    Command="{Binding Login}" />-->
-        </Grid>
+            <Button Text="Login"
+                    Command="{Binding Login}" />
+        </StackLayout>
 
     </ContentPage>

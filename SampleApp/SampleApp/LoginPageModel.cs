@@ -1,6 +1,7 @@
 ﻿using FreshMvvm;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using Xamarin.Forms;
 
@@ -8,17 +9,28 @@ namespace SampleApp
 {
     public class LoginPageModel : FreshBasePageModel
     {
+        public LoginPageModel()
+        {
+            Animals = new ObservableCollection<Animal>();
+            ShowList = false;
+        }
+
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
-            Animals = new List<Animal>();
+            base.ViewIsAppearing(sender, e);
+
+            Animals.Clear();
+
             Animals.Add(new Animal() { Name = "Ape" });
             Animals.Add(new Animal() { Name = "Bear" });
             Animals.Add(new Animal() { Name = "Cat" });
 
-            base.ViewIsAppearing(sender, e);
+            ShowList = true;
         }
 
-        public List<Animal> Animals { get; set; }
+        public ObservableCollection<Animal> Animals { get; set; }
+
+        public bool ShowList { get; set; }
 
         public Command Login
         {
@@ -26,6 +38,8 @@ namespace SampleApp
             {
                 return new Command(_ =>
                 {
+                    ShowList = false;
+
                     CoreMethods.SwitchOutRootNavigation("MAIN");
                 });
             }
