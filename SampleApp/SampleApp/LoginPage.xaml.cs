@@ -11,15 +11,15 @@ namespace SampleApp
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
-    public partial class MainPage : ContentPage
+    public partial class LoginPage : ContentPage
     {
-        public MainPageModel Model { get; set; }
+        public LoginPageModel Model { get; set; }
 
-        public MainPage()
+        public LoginPage()
         {
             InitializeComponent();
 
-            Model = new MainPageModel();
+            Model = new LoginPageModel();
 
             BindingContext = Model;
         }
