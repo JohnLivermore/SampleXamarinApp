@@ -7,37 +7,24 @@ using Xamarin.Forms;
 
 namespace SampleApp
 {
-    public class MainPageModel : INotifyPropertyChanged
+    public class MainPageModel : FreshBasePageModel
     {
         public MainPageModel()
         {
-            LengthString = "";
+            Model = new Model();
         }
 
+        public Model Model { get; set; }
+    }
+
+    public class Model : INotifyPropertyChanged
+    {
         private int? _length;
-        public string _lengthString;
 
         public int? Length
         {
             get { return _length; }
             set { SetProperty(ref _length, value); }
-        }
-        public string LengthString
-        {
-            get { return _lengthString; }
-            set { SetProperty(ref _lengthString, value); }
-        }
-
-        // template command
-        public Command Process
-        {
-            get
-            {
-                return new Command(_ =>
-                {
-                    LengthString = Length.ToString();
-                });
-            }
         }
 
         protected virtual void OnPropertyChanged([CallerMemberName]string propertyName = null)

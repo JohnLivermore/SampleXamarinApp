@@ -9,12 +9,12 @@
 
         <StackLayout>
             <Entry Keyboard="Numeric"
-                   Text="{Binding Length, Mode=TwoWay, Converter={StaticResource StringToInt}}">
+                   Text="{Binding Model.Length, Mode=TwoWay, Converter={StaticResource StringToInt}}">
                 <Entry.Behaviors>
                     <behaviors:IntegerValidationBehavior />
                 </Entry.Behaviors>
             </Entry>
-            <Label Text="{Binding LengthString}"
+            <Label Text="{Binding Model.LengthString}"
                    TextColor="Black" />
             <Button Text="Process"
                     Command="{Binding Process}" />
