@@ -7,5 +7,6 @@ namespace SampleApp
 {
     public class MainPageModel : FreshBasePageModel
     {
+        public int? Length { get; set; }
     }
 }

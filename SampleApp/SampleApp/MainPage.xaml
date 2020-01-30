@@ -3,15 +3,17 @@
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:d="http://xamarin.com/schemas/2014/forms/design"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:behaviors="clr-namespace:SampleApp"
                  mc:Ignorable="d"
                  x:Class="SampleApp.MainPage">
 
         <StackLayout>
-            <!-- Place new controls here -->
-            <Label Text="Welcome to Xamarin.Forms!" 
-                   Margin="20"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Start" />
+            <Entry Keyboard="Numeric"
+                   Text="{Binding Length, Mode=TwoWay, Converter={StaticResource StringToInt}}">
+                <Entry.Behaviors>
+                    <behaviors:IntegerValidationBehavior />
+                </Entry.Behaviors>
+            </Entry>
         </StackLayout>
 
     </ContentPage>
