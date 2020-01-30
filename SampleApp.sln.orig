@@ -3,8 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
+<<<<<<< HEAD
+=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp.Android", "SampleApp\SampleApp.Android\SampleApp.Android.csproj", "{A1C2D94B-CE39-4A31-9239-3F390EC6C2C7}"
 EndProject
+>>>>>>> master
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp.iOS", "SampleApp\SampleApp.iOS\SampleApp.iOS.csproj", "{69679FE1-AC5F-4D97-BA10-404CF78D7F0D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApp", "SampleApp\SampleApp\SampleApp.csproj", "{3C04B8AD-052E-4DA1-AADB-CB23C897074B}"
@@ -25,6 +28,8 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
+=======
 		{A1C2D94B-CE39-4A31-9239-3F390EC6C2C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A1C2D94B-CE39-4A31-9239-3F390EC6C2C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1C2D94B-CE39-4A31-9239-3F390EC6C2C7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -61,6 +66,7 @@ Global
 		{A1C2D94B-CE39-4A31-9239-3F390EC6C2C7}.Release|x86.ActiveCfg = Release|Any CPU
 		{A1C2D94B-CE39-4A31-9239-3F390EC6C2C7}.Release|x86.Build.0 = Release|Any CPU
 		{A1C2D94B-CE39-4A31-9239-3F390EC6C2C7}.Release|x86.Deploy.0 = Release|Any CPU
+>>>>>>> master
 		{69679FE1-AC5F-4D97-BA10-404CF78D7F0D}.Debug|Any CPU.ActiveCfg = Debug|iPhone
 		{69679FE1-AC5F-4D97-BA10-404CF78D7F0D}.Debug|Any CPU.Build.0 = Debug|iPhone
 		{69679FE1-AC5F-4D97-BA10-404CF78D7F0D}.Debug|Any CPU.Deploy.0 = Debug|iPhone
