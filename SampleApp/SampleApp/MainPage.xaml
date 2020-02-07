@@ -7,9 +7,8 @@
                  mc:Ignorable="d"
                  x:Class="SampleApp.MainPage">
         <StackLayout>
-            <DatePicker Date="{Binding StartDateTime}" />
             <c2:NullableDatePicker NullableDate="{Binding EndingDateTime}" />
-            <Label Text="{Binding StartDateTime}" />
+            <Button Command="{Binding Check}" Text="Check" />
         </StackLayout>
 
     </ContentPage>
